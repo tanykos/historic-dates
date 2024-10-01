@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'fonts';
+
+:root {
+  background-color: $background-color;
+  color: $text-color;
+} 
+
+body {
+  font-family: $font-main;
+}
