@@ -1,21 +1,24 @@
 import './DatesBlock.scss'
 import MainSwiper from '../MainSwiper';
-import Period from '../Period';
 import { useState } from 'react';
-import historyData from '../../data/historyData.json';
+import YearCounter from '../YearCounter';
 
 export default function DatesBlock() {
   const [currentPeriodIndex, setCurrentPeriodIndex] = useState<number>(0);
-  const countPeriods = historyData.length;
 
   return (
     <div className="container">
       <div className="column-left"></div>
       <div className="content">
         <h1 className="heading-1">Исторические<br/>даты</h1>
-        <Period periodId={currentPeriodIndex} />
+
+        <div className="period">
+          <YearCounter counterName='year-start' periodId={currentPeriodIndex}/>
+          <YearCounter counterName='year-end' periodId={currentPeriodIndex}/>
+        </div>
+
         <div className="swiper-wrap">
-          <MainSwiper countPeriods={countPeriods}/>
+          <MainSwiper setCurrentPeriodIndex={setCurrentPeriodIndex}/>
         </div>
       </div>
       <div className="column-right"></div>

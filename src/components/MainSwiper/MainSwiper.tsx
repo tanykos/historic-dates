@@ -8,10 +8,10 @@ import { Pagination, Navigation, EffectFade } from 'swiper/modules';
 import historyData from '../../data/historyData.json';
 
 interface MainSwiperProps {
-  countPeriods: number;
+  setCurrentPeriodIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export default function MainSwiper({ countPeriods }: MainSwiperProps) {
+export default function MainSwiper({ setCurrentPeriodIndex }: MainSwiperProps) {
   return (
     <Swiper
       className="main-swiper"
@@ -22,6 +22,10 @@ export default function MainSwiper({ countPeriods }: MainSwiperProps) {
       effect={'fade'}
       speed={1000}
       slidesPerView={1}
+      onSlideChange={(swiper) => {
+        const activeIndex = swiper.activeIndex;
+        setCurrentPeriodIndex(activeIndex);
+      }}
     >
       {historyData.map((periodData, index) => (
         <SwiperSlide key={periodData.id}>
