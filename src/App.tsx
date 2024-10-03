@@ -1,3 +1,7 @@
+import DatesBlock from "./components/DatesBlock";
+
 export default function App() {
-  return <div>Исторические Даты</div>;
+  return (
+    <DatesBlock/>
+  );
 }

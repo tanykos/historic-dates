@@ -1,8 +1,14 @@
-$background-color: #E5E5E5;
+$background-color: #F4F5F9;
 $text-color: #42567A;
 $primary-color: #5D5FEF;
 $secondary-color: #3877EE;
 $accent-color: #EF5DA8;
+$border-color: rgba($text-color, 0.1);
+$white-color: #FFFFFF;
 
 $font-main: 'PT Sans', sans-serif;
 $font-bebas-neue: 'Bebas Neue', sans-serif;
+
+:root {
+  --swiper-navigation-size: 12px;
+}

@@ -1,0 +1,93 @@
+@import '../../styles/variables';
+
+.main-swiper {
+  height: 18rem;
+  padding-top: 7rem;
+
+  & > .swiper-button-prev,
+  & > .swiper-button-next {
+    top: 46px;
+    padding: 24px;
+    border: 1px solid rgba($text-color, 0.5);
+    border-radius: 50%;
+    color: $text-color;
+
+    &:hover {
+      background-color: $white-color;
+    }
+  }
+
+  & > .swiper-button-prev {
+    left: 5rem;
+  
+  }
+  & > .swiper-button-next {
+    right: auto;
+    left: 9.375rem;
+  }
+
+  & > .swiper-pagination-fraction {
+    top: 0;
+    bottom: auto;
+    left: 5rem;
+    width: auto;
+  }
+
+  & > .swiper-wrapper > .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0!important;
+  }
+  
+  & > .swiper-wrapper > .swiper-slide-active {
+    transition-delay: 1.2s;
+  }
+}
+
+.nested-swiper {
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+  .nested-swiper-next,
+  .nested-swiper-prev {
+    padding: 20px;
+    color: $secondary-color;
+    border-radius: 50%;
+    background-color: $white-color;
+    box-shadow: 0 0 15px rgba($secondary-color, 0.1);
+
+    &.swiper-button-disabled {
+      opacity: 0;
+    }
+  }
+
+  .nested-swiper-next {
+    right: 2rem;
+  }
+
+  .nested-swiper-prev {
+    left: 2rem;
+  }
+
+  .event-header {
+    margin-bottom: 1rem;
+    font-family: 'Bebas Neue';
+    font-size: 1.6em;
+    line-height: 1.2;
+    color: $secondary-color;
+  }
+
+  .event-description {
+    font-size: 1.25em;
+    line-height: 1.5;
+  }
+}
+
+.event-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  max-height: calc(1.5em * 4);
+}
+
