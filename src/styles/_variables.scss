@@ -11,4 +11,9 @@ $font-bebas-neue: 'Bebas Neue', sans-serif;
 
 :root {
   --swiper-navigation-size: 12px;
+  --pagination-size: 530px;
+  --pagination-bullets-size: 6px;
+  --pagination-bullets-active-size: 56px;
+  --pagination-bullets-offset: calc(var(--pagination-size)/2 - var(--pagination-bullets-size)/2);
+  --pagination-bullets-active-offset: calc(var(--pagination-size)/2 - var(--pagination-bullets-active-size)/2);
 }
