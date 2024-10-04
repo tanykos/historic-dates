@@ -88,7 +88,7 @@ export default function MainSwiper({ setCurrentPeriodIndex, paginationClass }: M
           animatePaginationBullets(paginationClass, activeIndex);
         }}
       >
-        {historyData.map((periodData, index) => (
+        {historyData.map((periodData) => (
           <SwiperSlide key={periodData.id}>
             <Swiper
               className="nested-swiper"
@@ -97,10 +97,18 @@ export default function MainSwiper({ setCurrentPeriodIndex, paginationClass }: M
                 nextEl: '.nested-swiper-next',
                 prevEl: '.nested-swiper-prev',
               }}
-              spaceBetween={100}
+              spaceBetween={20}
               slidesPerView={3}
+              breakpoints={{
+                1024: {
+                  spaceBetween: 80,
+                },
+                1280: {
+                  spaceBetween: 100,
+                },
+              }}
             >
-              {periodData.events.map((slideData, index) => (
+              {periodData.events.map((slideData) => (
                 <SwiperSlide key={slideData.id}>
                   <header className="event-header">{slideData.year}</header>
                   <article className="event-description">{slideData.description}</article>

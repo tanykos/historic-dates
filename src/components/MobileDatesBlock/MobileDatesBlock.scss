@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+@media (max-width: 768px) {
+  .container-mobile {
+    padding: 3.75rem 1.25rem 0.875rem;
+  }
+
+  .heading-1-mobile {
+    font-size: 1.25em;
+  }
+
+  .period {
+    font-size: 3.5em;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid $border-color;
+    gap: 2rem;
+  }
+}

@@ -26,13 +26,6 @@
     left: 9.375rem;
   }
 
-  & > .swiper-pagination-fraction {
-    top: 0;
-    bottom: auto;
-    left: 5rem;
-    width: auto;
-  }
-
   & > .swiper-wrapper > .swiper-slide:not(.swiper-slide-active) {
     opacity: 0!important;
   }
@@ -78,6 +71,9 @@
   .event-description {
     font-size: 1.25em;
     line-height: 1.5;
+    @media (min-width: 769px) and (max-width: 1023px) {
+      font-size: 1em;
+    }
   }
 }
 
